@@ -1,2 +1,5 @@
 # Ignore the executable binary program file
 loadingnewyear
+
+# Any tests
+test*
