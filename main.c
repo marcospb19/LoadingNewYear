@@ -14,8 +14,8 @@ int main()
 
 	int columns = getWindowSize() - 2;
 
-	// int day = getDayOfYear();
-	int day = 365;
+	int day = getDayOfYear();
+
 	float ratio = day / 365.0;
 	int offset = 4;
 
@@ -31,7 +31,7 @@ int main()
 	// printf("columns: %d\n", columns);
 	// printf("day: %7d\n", day);
 
-	printf("%*.s%d%%\e[m\n" , columns / 2 - offset - 16 , "" , (int)(ratio * 100));
+	printf("%*.s%d%%\e[m\n" , columns / 2 - offset - 19 , "" , (int)(ratio * 100));
 	printf(" %s%*.s\e[m%*.s \n" , color  , (int)ceil(ratio * columns) , "" , (int)floor((1 - ratio) * columns) , "");
 
 	return 0;  // make sure your main returns int

@@ -1,31 +1,31 @@
 # Loading New Year!
 
-## THIS PROJECT is under construction... sorry for the mess
+![GitHub Logo](/images/example1.png)
 
-## loadingNewYear is a bar that shows on terminal the progress to the end of the year
+## loadingNewYear is a terminal bar that shows the year progress
 
-for linux... aaa
+Made for linux users, but should work on windows as well
 
 ## Installation
-Clone this repository wherever you want, then compile the executable using gcc, or run the shell script
+Clone this repository wherever you want
 
 > git clone git@github.com:marcospb19/loadingNewYear.git
 
-Then use gcc to compile the code
+Run install.sh to compile the program using GCC ([GCC installation](https://github.com/marcospb19/loadingNewYear/wiki/Installing-Gnu-Compiler-Collection-(GCC)))
 
-> gcc source/terminal.c main.c -o loadingnewyear
+> ./install.sh
 
-Or just run the bash script
+You can also compile it manually
 
-> ./make.sh
+> gcc source/terminal.c main.c -o loadingnewyear -lm
 
-## lolcat
+Now the file loadingNewYear is compiled and ready for use.
 
-Is recomended to use lolcat with loadgingNewYear
-On debian based systems:
->sudo apt install lolcat
+## Usage
 
-usage: loadingnewyear | lolcat
+Inside of the same folder as before, run the compiled file to use the program
 
+> ./loadingnewyear
 
-can readme.md be lowercase?
+:D
+

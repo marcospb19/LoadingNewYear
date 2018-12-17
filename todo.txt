@@ -1,2 +1,2 @@
-Just complete the basic bar
+Make the code look nicer, and document it
 
