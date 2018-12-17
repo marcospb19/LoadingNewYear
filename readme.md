@@ -1,17 +1,17 @@
 # Loading New Year!
 
-![GitHub Logo](/images/example1.png)
+![Installation and Usage](/images/installationAndUsage.png)
 
 ## loadingNewYear is a terminal bar that shows the year progress
 
 Made for linux users, but should work on windows as well
 
 ## Installation
-Clone this repository wherever you want
+Clone this repository wherever you want (requires git installed)
 
 > git clone git@github.com:marcospb19/loadingNewYear.git
 
-Run install.sh to compile the program using GCC ([GCC installation](https://github.com/marcospb19/loadingNewYear/wiki/Installing-Gnu-Compiler-Collection-(GCC)))
+Run install.sh to compile the program using GCC ([GCC installation](https://github.com/marcospb19/loadingNewYear/wiki/How-to-install-Gnu-Compiler-Collection-(GCC))))
 
 > ./install.sh
 
