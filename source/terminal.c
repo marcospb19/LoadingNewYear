@@ -1,10 +1,10 @@
 #include <sys/ioctl.h> /* getWindowSize() */
 #include <unistd.h>    /* getWindowSize() */
-#include <time.h>      /* getDayOfYear ()  */
+#include <time.h>      /* getDayOfYear () */
 
 
 // Return the number of columns of the terminal
-int getWindowSize()
+int getWindowWidth()
 {
 	struct winsize terminalWindow;
 	ioctl(STDOUT_FILENO , TIOCGWINSZ , &terminalWindow);
@@ -28,7 +28,7 @@ int getDayOfYear()
 	time_t rawTime = time(NULL);
 	struct tm* timeinfo;
 	timeinfo = localtime(&rawTime); // Fill the struct with actual time
-	return timeinfo->tm_yday; // Return only the dayOfYear
+	return timeinfo->tm_yday + 1;   // Return only the dayOfYear
 
 	// From tm struct:
 

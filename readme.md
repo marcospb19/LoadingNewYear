@@ -1,9 +1,7 @@
 # Loading New Year!
-
 ![Installation and Usage](/images/installationAndUsage.png)
 
 ## loadingNewYear is a terminal bar that shows the year progress
-
 Made for linux users, but should work on windows as well
 
 ## Installation
@@ -22,10 +20,8 @@ You can also compile it manually
 Now the file loadingNewYear is compiled and ready for use.
 
 ## Usage
-
 Inside of the same folder as before, run the compiled file to use the program
 
 > ./loadingnewyear
 
 :D
-
