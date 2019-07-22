@@ -1,4 +1,5 @@
 #include <stdio.h>           // printf()
+#include <stdlib.h>          // system()
 #include <string.h>          // strcpy()
 #include <math.h>            // ceil() and floor()
 #include "source/terminal.h" // getWindowWidth() and getDayOfYear()
@@ -29,6 +30,16 @@ int main()
 
 	printf("\e[1;37m%*.d / 365, %d day%s left" , offset , day , 365 - day , day == 1 ? "" : "s");
 	printf("%*.s%d%%\e[m\n" , barWidth / 2 - offset - 19 , "" , (int)(ratio * 100));
-	printf(" %s%*.s\e[m%*.s \n" , color  , (int)ceil(ratio * barWidth) , "" , (int)floor((1 - ratio) * barWidth) , "");
+	printf(" %s" , color);
+
+	fflush(stdin);
+	for (int i = 0; i < (int)ceil(ratio * barWidth); ++i)
+	{
+		printf(" ");
+		system("sleep 0.01");
+		fflush(stdout);
+	}
+
+	printf("\e[m%*.s \n" , (int)floor((1 - ratio) * barWidth) , "");
 	printf(resetColor);
 }
