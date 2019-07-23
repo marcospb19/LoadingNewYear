@@ -17,3 +17,8 @@ loadingnewyear: $(OBJECTS)
 
 clean:
 	@rm $(OBJECTS) 2> /dev/null || exit 0
+
+install: loadingnewyear
+	@sudo cp loadingnewyear /usr/bin/ && \
+		echo "Installed, Thank you!" || \
+		echo "Problem Installing."
