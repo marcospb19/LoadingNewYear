@@ -1,27 +1,27 @@
-# Loading New Year!
-![Installation and Usage](/images/installationAndUsage.png)
+# LoadingNewYear
 
-## loadingNewYear is a terminal bar that shows the year progress
-Made for linux users, but should work on windows as well
+Demo:
+![Installation and Usage](/images/installation_and_usage.png)
+
+LoadingNewYear is a CLI colored terminal bar written in C that shows the actual year \
+progress and changes color based on it.
+
+Now with the loading animation!
 
 ## Installation
-Clone this repository wherever you want (requires git installed)
 
-> git clone git@github.com:marcospb19/loadingNewYear.git
+Clone this repository wherever you want (requires `git`) \
+Run compile it the program using `GCC` ([GCC installation](https://github.com/marcospb19/loadingNewYear/wiki/How-to-install-Gnu-Compiler-Collection-(GCC))))
 
-Run install.sh to compile the program using GCC ([GCC installation](https://github.com/marcospb19/loadingNewYear/wiki/How-to-install-Gnu-Compiler-Collection-(GCC))))
+Compiling:
 
-> ./install.sh
+> git clone git@github.com:marcospb19/loadingNewYear.git \
+> cd loadingnewyear/src \
+> make
 
-You can also compile it manually
-
-> gcc source/terminal.c main.c -o loadingnewyear -lm
-
-Now the file loadingNewYear is compiled and ready for use.
+Installing:
+> make install
 
 ## Usage
-Inside of the same folder as before, run the compiled file to use the program
 
-> ./loadingnewyear
-
-:D
+Type `loadingnewyear` after installing.

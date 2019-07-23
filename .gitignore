@@ -1,5 +1,8 @@
 # Ignore the executable binary program file
 loadingnewyear
 
+# Objects
+*.o
+
 # Any tests
 test*
