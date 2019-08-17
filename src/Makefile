@@ -2,8 +2,7 @@
 .PHONY = clean
 .PHONY = install
 
-CC = clang
-# CC = gcc | tcc
+CC = clang # gcc tcc
 CFLAGS = -O2 -Wall -std=c11
 LDFLAGS = -lm
 OBJECTS = loadingnewyear.o terminal.o time.o
