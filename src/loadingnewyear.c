@@ -51,7 +51,7 @@ int main(int argc , char* argv[])
 	for (int i = 0; i < (int)ceil(ratio * barWidth); ++i)
 	{
 		printf(" ");
-		msleep(19); // Sleeps for 15 milliseconds
+		msleep(15); // Sleeps for 15 milliseconds
 		fflush(stdout);
 	}
 
