@@ -31,17 +31,17 @@ int main(int argc , char* argv[])
 
 	// Pick the color of the bar
 	strcpy(color ,
-	ratio == 1  ? green   : // Fireworks!
-	ratio > 0.8 ? blue    : // End is nearby...
-	ratio > 0.5 ? yellow  : // Half done.
-	day  <= 10  ? magenta : // First 10 days of the year.
-	red);                   // Nothing to celebrate.
+		ratio == 1  ? green   : // Fireworks!
+		ratio > 0.8 ? blue    : // End is nearby...
+		ratio > 0.5 ? yellow  : // Half done.
+		day  <= 10  ? magenta : // First 10 days of the year.
+		red);                   // Nothing to celebrate.
 
 	int barWidth = get_window_width() - 2;
 	int offset = 4; // Correction
 
 	// First line output
-	// Confusing piece of code that do some magic, sorry for the mess guys
+	// Confusing piece of code that do some magic, sorry for the mess here
 	printf(bold_white "%*.d / 365, %d day%s left" , offset , day , 365 - day , day == 1 ? "" : "s");
 	printf("%*.s%d%%\e[m\n" , barWidth / 2 - offset - 19 , "" , (int)(ratio * 100));
 	printf(" %s" , color);
