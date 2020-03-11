@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>   // strcpy()
 #include <stdlib.h>   // system()
-#include <math.h>     // ceil() and floor()
 #include "terminal.h" // get_window_width()
 #include "time.h"     // get_day_of_year() and msleep()
 
@@ -16,12 +15,27 @@
 
 int main(int argc , char* argv[])
 {
-	if (argc > 1)
+	for (int i = 1 ; i < argc ; i++)
 	{
-		fprintf(stderr, "LoadingNewYear don't support any arguments.\n");
-		return 1;
+		if (strcmp(argv[i] , "--help") == 0 ||
+		    strcmp(argv[i] , "-h"    ) == 0)
+		{
+			puts("Software from https://github.com/marcospb19/LoadingNewYear.");
+			puts("LoadingNewYear is a simple and animated colored bar that shows the year progress.");
+			return 0;
+		}
+		else if (strcmp(argv[i] , "--version") == 0 ||
+		         strcmp(argv[i] , "-V"       ) == 0)
+		{
+			puts("Software from https://github.com/marcospb19/LoadingNewYear.");
+			return 0;
+		}
+		else
+		{
+			fprintf(stderr , "Argument not recognized \"%s\"\n" , argv[i]);
+			return 1;
+		}
 	}
-
 
 	int day = get_day_of_year();
 	// Ratio represents how full the year is
@@ -29,7 +43,7 @@ int main(int argc , char* argv[])
 
 	char progress_color[10];
 
-	// Pick the color of the bar
+	// Pick the color of the bar based on the year progress
 	strcpy(progress_color ,
 		ratio == 1  ? green   : // Fireworks!
 		ratio > 0.8 ? blue    : // End is nearby...
@@ -52,11 +66,11 @@ int main(int argc , char* argv[])
 	printf("\n %s" , progress_color);
 
 	// Bar loading with the animation and sleeps between
-	for (int i = 0; i < (int)ceil(ratio * barWidth); ++i)
+	for (int i = 0 ; i < (int)(ratio * barWidth + 1) ; ++i)
 	{
 		printf(" ");
 		fflush(stdout);
-		msleep(15); // Sleeps for 15 milliseconds
+		msleep(20); // Sleeps for N milliseconds
 	}
 
 	// Reset the color and fill the remaining space with spaces

@@ -4,7 +4,7 @@
 
 CC = gcc # clang tcc
 CFLAGS = -O2 -Wall -Wextra -std=c11
-LDFLAGS = -lm
+LDFLAGS = -lm # Unused
 OBJECTS = loadingnewyear.o terminal.o time.o
 
 
