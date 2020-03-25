@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <string.h>   // strcpy()
-#include <stdlib.h>   // system()
 #include "terminal.h" // get_window_width()
-#include "time.h"     // get_day_of_year() and msleep()
+#include "time.h"     // get_day_of_year(), milliseconds_sleep(), quantity_of_days_in_the_year()
 
 #define red      "\e[101;1m"
 #define green    "\e[102;1m"
@@ -55,6 +54,7 @@ int main(int argc , char* argv[])
 	int offset = 4; // Correction
 
 	// First line output
+
 	// Confusing piece of code that do some magic, sorry for the mess here
 
 	// Change color and style to white and bold
@@ -70,7 +70,7 @@ int main(int argc , char* argv[])
 	{
 		printf(" ");
 		fflush(stdout);
-		msleep(20); // Sleeps for N milliseconds
+		milliseconds_sleep(20); // Sleeps for N milliseconds
 	}
 
 	// Reset the color and fill the remaining space with spaces

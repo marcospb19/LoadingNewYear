@@ -1,12 +1,10 @@
-#ifndef TIME_H
-#define TIME_H
-
+#pragma once
 
 int get_day_of_year();
-// Returns the day of the year (0 - 365) to create the bar progress
+// Return the number of day of the year
 
-void msleep(long milli_secs);
-// Sleeps the program for milliseconds
+int quantity_of_days_in_the_year();
+// Get how many days in the current year (considering leap years)
 
-
-#endif
+void milliseconds_sleep(long milliseconds);
+// *Properly* sleeps the program for passed milliseconds
