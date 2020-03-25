@@ -20,4 +20,4 @@ clean:
 install: loadingnewyear
 	@sudo cp loadingnewyear /usr/bin/ && \
 		echo "Installed, Thank you!" || \
-		echo "Problem Installing."
+		echo "A problem ocurred. Please, try again."
